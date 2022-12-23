@@ -20,7 +20,7 @@ public static WebDriver driver;
 
 	@BeforeClass
 	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Hithesh Puthran\\git\\repository\\ActitimeV2\\src\\main\\resources\\driver\\chromedriver.exe");
 		driver =new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

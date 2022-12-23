@@ -3,7 +3,7 @@ package com.actitime.testscript;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ public class CustomerModule extends BaseClass{
 		t.getCreateCustBtn().click();
 		Thread.sleep(4000);
 		String actualCustName = t.getActualCustCreateTx().getText();
-		Assert.assertEquals(actualCustName, expCustName);
+		AssertJUnit.assertEquals(actualCustName, expCustName);
 	}
 	
 }
