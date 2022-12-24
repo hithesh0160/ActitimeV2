@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Dec 24 00:10:08 IST 2022</td>
+<td>Started on:</td><td>Sat Dec 24 09:12:00 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29176 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13319 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,26 +76,28 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.actitime.testscript.CustomerModule.testCreateCustomer()'><b>testCreateCustomer</b><br>Test class: com.actitime.testscript.CustomerModule<br/>
-<a href="#Output-2144067911" onClick='toggleBox("Output-2144067911", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2014563089" onClick='toggleBox("Output-2014563089", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2144067911" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2144067911">
+<a href="#Output-2014563089" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2014563089">
 CreateCustomer<br/>
 </div>
 </td>
-<td><div><pre>java.io.IOException: Your InputStream was neither an OLE2 stream, nor an OOXML stream or you haven&apos;t provide the poi-ooxml*.jar in the classpath/modulepath - FileMagic: OOXML, having providers: [org.apache.poi.hssf.usermodel.HSSFWorkbookFactory@7807ac2c]
-	at org.apache.poi.ss.usermodel.WorkbookFactory.wp(WorkbookFactory.java:334)
-	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:224)
-	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:185)
-	at com.actitime.generic.FileLib.getExcelData(FileLib.java:23)
+<td><div><pre>java.io.IOException: org.apache.poi.xssf.usermodel.XSSFWorkbookFactory not found - check if poi-ooxml-*.jar is on the classpath.
+	at org.apache.poi.ss.usermodel.WorkbookFactory.initFactory(WorkbookFactory.java:351)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.initXssf(WorkbookFactory.java:336)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:255)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:221)
+	at com.actitime.generic.FileLib.getExcelData(FileLib.java:24)
 	at com.actitime.testscript.CustomerModule.testCreateCustomer(CustomerModule.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2144067911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2144067911'><pre>java.io.IOException: Your InputStream was neither an OLE2 stream, nor an OOXML stream or you haven&apos;t provide the poi-ooxml*.jar in the classpath/modulepath - FileMagic: OOXML, having providers: [org.apache.poi.hssf.usermodel.HSSFWorkbookFactory@7807ac2c]
-	at org.apache.poi.ss.usermodel.WorkbookFactory.wp(WorkbookFactory.java:334)
-	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:224)
-	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:185)
-	at com.actitime.generic.FileLib.getExcelData(FileLib.java:23)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2014563089", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2014563089'><pre>java.io.IOException: org.apache.poi.xssf.usermodel.XSSFWorkbookFactory not found - check if poi-ooxml-*.jar is on the classpath.
+	at org.apache.poi.ss.usermodel.WorkbookFactory.initFactory(WorkbookFactory.java:351)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.initXssf(WorkbookFactory.java:336)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:255)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:221)
+	at com.actitime.generic.FileLib.getExcelData(FileLib.java:24)
 	at com.actitime.testscript.CustomerModule.testCreateCustomer(CustomerModule.java:23)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -125,7 +127,7 @@ CreateCustomer<br/>
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.actitime.testscript.CustomerModule@8dbdac1</td></tr>
+<td>com.actitime.testscript.CustomerModule@5f058f00</td></tr>
 </table><p>
 </body>
 </html>

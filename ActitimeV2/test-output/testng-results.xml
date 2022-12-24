@@ -2,6 +2,9 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
+      <![CDATA[openBrowser]]>
+    </line>
+    <line>
       <![CDATA[login]]>
     </line>
     <line>
@@ -14,33 +17,37 @@
       <![CDATA[closeBrowser]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-12-24T00:10:08 IST" name="Suite" finished-at="2022-12-24T00:10:38 IST" duration-ms="29176">
+  <suite started-at="2022-12-24T09:12:00 IST" name="Suite" finished-at="2022-12-24T09:12:14 IST" duration-ms="13319">
     <groups>
     </groups>
-    <test started-at="2022-12-24T00:10:08 IST" name="Test" finished-at="2022-12-24T00:10:38 IST" duration-ms="29176">
+    <test started-at="2022-12-24T09:12:00 IST" name="Test" finished-at="2022-12-24T09:12:14 IST" duration-ms="13319">
       <class name="com.actitime.testscript.CustomerModule">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@8dbdac1]" started-at="2022-12-24T00:10:08 IST" name="openBrowser" finished-at="2022-12-24T00:10:10 IST" duration-ms="1908" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@5f058f00]" started-at="2022-12-24T09:12:00 IST" name="openBrowser" finished-at="2022-12-24T09:12:02 IST" duration-ms="1708" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[openBrowser]]>
+            </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testscript.CustomerModule@8dbdac1]" started-at="2022-12-24T00:10:10 IST" name="login" finished-at="2022-12-24T00:10:17 IST" duration-ms="6408" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testscript.CustomerModule@5f058f00]" started-at="2022-12-24T09:12:02 IST" name="login" finished-at="2022-12-24T09:12:08 IST" duration-ms="6261" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[login]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="testCreateCustomer()[pri:0, instance:com.actitime.testscript.CustomerModule@8dbdac1]" started-at="2022-12-24T00:10:17 IST" name="testCreateCustomer" finished-at="2022-12-24T00:10:17 IST" duration-ms="104" status="FAIL">
+        <test-method signature="testCreateCustomer()[pri:0, instance:com.actitime.testscript.CustomerModule@5f058f00]" started-at="2022-12-24T09:12:08 IST" name="testCreateCustomer" finished-at="2022-12-24T09:12:08 IST" duration-ms="14" status="FAIL">
           <exception class="java.io.IOException">
             <message>
-              <![CDATA[Your InputStream was neither an OLE2 stream, nor an OOXML stream or you haven't provide the poi-ooxml*.jar in the classpath/modulepath - FileMagic: OOXML, having providers: [org.apache.poi.hssf.usermodel.HSSFWorkbookFactory@7807ac2c]]]>
+              <![CDATA[org.apache.poi.xssf.usermodel.XSSFWorkbookFactory not found - check if poi-ooxml-*.jar is on the classpath.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.IOException: Your InputStream was neither an OLE2 stream, nor an OOXML stream or you haven't provide the poi-ooxml*.jar in the classpath/modulepath - FileMagic: OOXML, having providers: [org.apache.poi.hssf.usermodel.HSSFWorkbookFactory@7807ac2c]
-at org.apache.poi.ss.usermodel.WorkbookFactory.wp(WorkbookFactory.java:334)
-at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:224)
-at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:185)
-at com.actitime.generic.FileLib.getExcelData(FileLib.java:23)
+              <![CDATA[java.io.IOException: org.apache.poi.xssf.usermodel.XSSFWorkbookFactory not found - check if poi-ooxml-*.jar is on the classpath.
+at org.apache.poi.ss.usermodel.WorkbookFactory.initFactory(WorkbookFactory.java:351)
+at org.apache.poi.ss.usermodel.WorkbookFactory.initXssf(WorkbookFactory.java:336)
+at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:255)
+at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:221)
+at com.actitime.generic.FileLib.getExcelData(FileLib.java:24)
 at com.actitime.testscript.CustomerModule.testCreateCustomer(CustomerModule.java:23)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -77,14 +84,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- testCreateCustomer -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testscript.CustomerModule@8dbdac1]" started-at="2022-12-24T00:10:20 IST" name="logout" finished-at="2022-12-24T00:10:21 IST" duration-ms="1005" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testscript.CustomerModule@5f058f00]" started-at="2022-12-24T09:12:12 IST" name="logout" finished-at="2022-12-24T09:12:14 IST" duration-ms="1172" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[logout]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@8dbdac1]" started-at="2022-12-24T00:10:21 IST" name="closeBrowser" finished-at="2022-12-24T00:10:38 IST" duration-ms="16205" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@5f058f00]" started-at="2022-12-24T09:12:14 IST" name="closeBrowser" finished-at="2022-12-24T09:12:14 IST" duration-ms="111" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[closeBrowser]]>
