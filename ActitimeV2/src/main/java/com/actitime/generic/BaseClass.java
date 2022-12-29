@@ -3,6 +3,8 @@ package com.actitime.generic;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
@@ -17,11 +19,13 @@ import com.actitime.pom.LoginPage;
 public class BaseClass {
 
 public static WebDriver driver;
+public static Logger logger=LogManager.getLogger("BaseClass"); 
 
 	@BeforeClass
 	public void openBrowser() {
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\driver\\chromedriver.exe");
 		driver =new ChromeDriver();
+		logger.debug("opening the browser");
 		Reporter.log("openBrowser",true);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -29,11 +33,13 @@ public static WebDriver driver;
 	
 	@AfterClass
 	public void closeBrowser() {
+		logger.info("closing the browser");
 		Reporter.log("closeBrowser",true);
 		driver.close();
 	}
 	@BeforeMethod
 	public void login() throws IOException {
+		logger.info("logging in");
 		Reporter.log("login",true);
 		FileLib f=new FileLib();
 		String url = f.getPropertyData("url");
@@ -45,12 +51,11 @@ public static WebDriver driver;
 	}
 	@AfterMethod
 	public void logout() {
+		logger.info("logging out");
 		Reporter.log("logout",true);
 		EnterTimeTrackPage e=new EnterTimeTrackPage(driver);
 		e.setLogout();
 	}
-	
-	
 	
 }
 

@@ -2,6 +2,7 @@ package com.actitime.testscript;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.AssertJUnit;
 import org.testng.Reporter;
@@ -14,10 +15,11 @@ import com.actitime.pom.EnterTimeTrackPage;
 import com.actitime.pom.TaskListPage;
 
 @Listeners(com.actitime.generic.ListenerImplementation.class)
-public class CustomerModule extends BaseClass{
-
+public class CustomerModule extends BaseClass{	
 	@Test
 	public void testCreateCustomer() throws InterruptedException, EncryptedDocumentException, IOException  {
+		logger.info("Start");
+		logger.debug("Debug");
 		Reporter.log("CreateCustomer",true);
 		FileLib f=new FileLib();
 		String expCustName = f.getExcelData("CreateCustomer", 1, 2);
@@ -32,6 +34,7 @@ public class CustomerModule extends BaseClass{
 		t.getSelectCustDD().click();
 		t.getOurCompanyTx().click();
 		t.getCreateCustBtn().click();
+		logger.info("creating customer");
 		Thread.sleep(4000);
 		String actualCustName = t.getActualCustCreateTx().getText();
 		AssertJUnit.assertEquals(actualCustName, expCustName);
