@@ -25,7 +25,7 @@ public static Logger logger=LogManager.getLogger("BaseClass");
 	public void openBrowser() {
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\driver\\chromedriver.exe");
 		driver =new ChromeDriver();
-		logger.debug("opening the browser");
+		logger.debug("Opening the browser");
 		Reporter.log("openBrowser",true);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
